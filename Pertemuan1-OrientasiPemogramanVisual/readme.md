@@ -1,70 +1,49 @@
-# PERTEMUAN 01
-**Orientasi & Fundamental Pemrograman Visual**
+<div align="center">
+
+# MODUL 01: ORIENTASI & FUNDAMENTAL PEMROGRAMAN VISUAL
+
+[![Topic](https://img.shields.io/badge/Topik-Fundamental%20GUI-0078D7?style=for-the-badge&logo=windows)](https://learn.microsoft.com/dotnet/desktop/winforms/)
+[![Paradigm](https://img.shields.io/badge/Paradigma-Visual%20Programming-512BD4?style=for-the-badge&logo=dotnet)](https://learn.microsoft.com/dotnet/visual-basic/)
+[![Environment](https://img.shields.io/badge/Platform-IDE%20%26%20Designer-239120?style=for-the-badge&logo=visualstudio)](https://visualstudio.microsoft.com/)
+
+<p align="center">
+  Dokumentasi dasar paradigma pemrograman visual, pemahaman antarmuka grafis (GUI), analisis komparatif alur komputasi, serta pengenalan ekosistem pengembangan perangkat lunak modern.
+</p>
+
+[Definisi](#1-definisi-dasar) •
+[Tujuan & Manfaat](#2-tujuan--manfaat-pembelajaran) •
+[Karakteristik](#3-karakteristik-utama) •
+[Komparasi Paradigma](#4-analisis-komparatif-visual-vs-konvensional) •
+[Evaluasi Kelebihan & Limitasi](#5-evaluasi-kelebihan--keterbatasan) •
+[Ekosistem Platform](#6-implementasi--platform-populer) •
+[Glosarium](#7-glosarium-teknis)
+
+</div>
 
 ---
 
-### 1. Definisi
+## 1. Definisi Dasar
 
-Pemrograman Visual (*Visual Programming*) merupakan paradigma rekayasa perangkat lunak yang memanfaatkan komponen grafis seperti blok logika, diagram alir, ikon, dan kontrol visual untuk membangun struktur program. Berbeda dari pendekatan konvensional berbasis teks (*text-based code*), metode ini memfasilitasi perancangan antarmuka dan alur komputasi melalui mekanisme manipulasi langsung (*drag-and-drop*).
+> **Pemrograman Visual (*Visual Programming*)** merupakan paradigma perancangan perangkat lunak yang menggunakan representasi grafis—seperti diagram, ikon interaktif, blok logika, dan kontrol visual—sebagai pengganti penulisan baris kode teks secara murni.
 
----
-
-### 2. Tujuan & Manfaat
-
-* **Akselerasi Pemahaman Konseptual**: Memudahkan pemahaman logika dasar (variabel, kondisional, perulangan) tanpa beban sintaksis awal.
-* **Struktur Alur Terlihat Jelas**: Hubungan dependensi dan hierarki logika tersaji langsung secara visual.
-* **Jembatan Pembelajaran Sintaksis**: Berperan sebagai fondasi sebelum transisi ke bahasa pemrograman berbasis teks penuh.
-* **Reduksi Kesalahan Penulisan**: Meminimalkan potensi *syntax error* akibat kesalahan ketik secara manual.
+Dalam lingkungan praktikum, paradigma ini memungkinkan pengembang membangun arsitektur antarmuka dan mendefinisikan relasi logika secara langsung melalui mekanisme visual (*drag-and-drop*) di atas kanvas kerja.
 
 ---
 
-### 3. Karakteristik Utama
+## 2. Tujuan & Manfaat Pembelajaran
 
-* **Representasi Visual**: Logika diekspresikan lewat komponen visual yang saling terhubung.
-* **Interaksi Langsung (*Drag-and-Drop*)**: Komposisi antarmuka dan fungsionalitas dirancang langsung di atas kanvas kerja.
-* **Umpan Balik Real-Time**: Perubahan tata letak antarmuka dan relasi komponen dapat diobservasi secara instan.
+Penerapan paradigma visual memberikan sejumlah keunggulan akselerasi pemahaman:
 
----
-
-### 4. Analisis Komparatif: Visual vs Konvensional
-
-| Parameter Evaluasi | Pemrograman Visual | Pemrograman Konvensional |
-| :--- | :--- | :--- |
-| **Media Utama** | Blok / Objek Grafis / Kontrol UI | Baris Kode Teks (Sintaks Murni) |
-| **Mekanisme Desain** | Visual *Drag-and-Drop* | Pengetikan Manual |
-| **Kurva Pembelajaran** | Landai, ramah pemula | Cenderung curam, butuh adaptasi aturan bahasa |
-| **Potensi Syntax Error** | Rendah (tervalidasi sistem editor) | Tinggi (sensitif terhadap *typo* & karakter khusus) |
-| **Visibilitas Alur** | Eksplisit pada diagram / kanvas | Implisit, dipahami lewat pembacaan baris kode |
-| **Skalabilitas & Fleksibilitas** | Terbatas pada kapabilitas komponen penyedia | Sangat tinggi untuk logika kompleks & sistem besar |
+* **Akselerasi Pemahaman Konseptual:** Membantu memvisualisasikan operasi logika dasar (deklarasi variabel, struktur percabangan, perulangan) tanpa terhambat oleh kompleksitas aturan sintaksis di tahap awal.
+* **Transparansi Struktur Alur:** Hierarki kontrol antarmuka dan dependensi antar-elemen tersaji secara eksplisit dan mudah dibaca.
+* **Jembatan Menuju Kode Konvensional:** Menjadi fondasi logis sebelum beralih ke perancangan kode berbasis teks secara menyeluruh.
+* **Reduksi Kesalahan Ketik:** Meminimalisir potensi *syntax error* akibat kesalahan penulisan simbol maupun format sintaks.
 
 ---
 
-### 5. Kelebihan & Keterbatasan
+## 3. Karakteristik Utama
 
-#### Kelebihan
-* Mempercepat proses perancangan GUI (*Graphical User Interface*).
-* Alur eksekusi lebih mudah dipetakan dan ditelusuri.
-* Memangkas waktu *debugging* terhadap *syntax error* sepele.
+Secara arsitektur, pemrograman visual dibangun atas tiga karakteristik pokok:
 
-#### Keterbatasan
-* Ruang kustomisasi untuk algoritma tingkat lanjut terbatas pada fitur bawaan komponen.
-* Visibilitas kanvas cenderung padat dan sulit dimaintain pada proyek skala enterprise.
-* Terikat kuat pada ekosistem dan *engine* platform yang digunakan.
-
----
-
-### 6. Implementasi & Platform Populer
-
-* **Visual Basic (.NET)**: Bahasa pemrograman berbasis Microsoft dengan dukungan penuh Visual Studio IDE untuk membangun aplikasi Windows Form.
-* **JavaFX**: Toolkit dan framework GUI modern untuk arsitektur aplikasi berbasis Java.
-* **MIT App Inventor**: Ekosistem perancangan aplikasi mobile berbasis perakitan blok komponen.
-* **Scratch**: Platform edukasi berbasis blok visual untuk pemahaman logika komputasional dasar.
-
----
-
-### 7. Glosarium Teknis
-
-* **IDE (*Integrated Development Environment*)**: Lingkungan terpadu yang memadukan code editor, GUI designer, compiler, dan debugger.
-* **GUI (*Graphical User Interface*)**: Lapisan antarmuka pengguna berbasis visual untuk interaksi interaktif.
-* **Block-Based Programming**: Pendekatan konstruksi instruksi melalui susunan blok logika yang terstandarisasi.
-* **Visual Form Designer**: Area kerja grafis untuk menyusun komponen antarmuka pengguna secara visual.
+```text
+[ Komponen Visual ] ──( Drag & Drop )──> [ Kanvas Desainer ] ──( Event Binding )──> [ Umpan Balik Instan ]
