@@ -1,0 +1,16 @@
+D:\Pemograman-Visual-main\Pertemuan2-KomponenVisual\bin\Debug\net10.0-windows\Pertemuan2-KomponenVisual.exe
+D:\Pemograman-Visual-main\Pertemuan2-KomponenVisual\bin\Debug\net10.0-windows\Pertemuan2-KomponenVisual.deps.json
+D:\Pemograman-Visual-main\Pertemuan2-KomponenVisual\bin\Debug\net10.0-windows\Pertemuan2-KomponenVisual.runtimeconfig.json
+D:\Pemograman-Visual-main\Pertemuan2-KomponenVisual\bin\Debug\net10.0-windows\Pertemuan2-KomponenVisual.dll
+D:\Pemograman-Visual-main\Pertemuan2-KomponenVisual\bin\Debug\net10.0-windows\Pertemuan2-KomponenVisual.pdb
+D:\Pemograman-Visual-main\Pertemuan2-KomponenVisual\obj\Debug\net10.0-windows\Pertemuan2_KomponenVisual.Form1.resources
+D:\Pemograman-Visual-main\Pertemuan2-KomponenVisual\obj\Debug\net10.0-windows\Pertemuan2-KomponenVisual.vbproj.GenerateResource.cache
+D:\Pemograman-Visual-main\Pertemuan2-KomponenVisual\obj\Debug\net10.0-windows\Pertemuan2-KomponenVisual.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pemograman-Visual-main\Pertemuan2-KomponenVisual\obj\Debug\net10.0-windows\Pertemuan2-KomponenVisual.AssemblyInfoInputs.cache
+D:\Pemograman-Visual-main\Pertemuan2-KomponenVisual\obj\Debug\net10.0-windows\Pertemuan2-KomponenVisual.AssemblyInfo.vb
+D:\Pemograman-Visual-main\Pertemuan2-KomponenVisual\obj\Debug\net10.0-windows\Pertemuan2-KomponenVisual.vbproj.CoreCompileInputs.cache
+D:\Pemograman-Visual-main\Pertemuan2-KomponenVisual\obj\Debug\net10.0-windows\Pertemuan2-KomponenVisual.dll
+D:\Pemograman-Visual-main\Pertemuan2-KomponenVisual\obj\Debug\net10.0-windows\refint\Pertemuan2-KomponenVisual.dll
+D:\Pemograman-Visual-main\Pertemuan2-KomponenVisual\obj\Debug\net10.0-windows\Pertemuan2-KomponenVisual.pdb
+D:\Pemograman-Visual-main\Pertemuan2-KomponenVisual\obj\Debug\net10.0-windows\Pertemuan2-KomponenVisual.genruntimeconfig.cache
+D:\Pemograman-Visual-main\Pertemuan2-KomponenVisual\obj\Debug\net10.0-windows\ref\Pertemuan2-KomponenVisual.dll
