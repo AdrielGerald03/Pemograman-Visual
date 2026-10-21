@@ -1,0 +1,14 @@
+C:\Users\dk\Downloads\pemograman-visual-main\pemograman-visual-main sata\pertemuan-08\DataMahasiswa\bin\Debug\net10.0-windows\DataMahasiswa.exe
+C:\Users\dk\Downloads\pemograman-visual-main\pemograman-visual-main sata\pertemuan-08\DataMahasiswa\bin\Debug\net10.0-windows\DataMahasiswa.deps.json
+C:\Users\dk\Downloads\pemograman-visual-main\pemograman-visual-main sata\pertemuan-08\DataMahasiswa\bin\Debug\net10.0-windows\DataMahasiswa.runtimeconfig.json
+C:\Users\dk\Downloads\pemograman-visual-main\pemograman-visual-main sata\pertemuan-08\DataMahasiswa\bin\Debug\net10.0-windows\DataMahasiswa.dll
+C:\Users\dk\Downloads\pemograman-visual-main\pemograman-visual-main sata\pertemuan-08\DataMahasiswa\bin\Debug\net10.0-windows\DataMahasiswa.pdb
+C:\Users\dk\Downloads\pemograman-visual-main\pemograman-visual-main sata\pertemuan-08\DataMahasiswa\obj\Debug\net10.0-windows\DataMahasiswa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dk\Downloads\pemograman-visual-main\pemograman-visual-main sata\pertemuan-08\DataMahasiswa\obj\Debug\net10.0-windows\DataMahasiswa.AssemblyInfoInputs.cache
+C:\Users\dk\Downloads\pemograman-visual-main\pemograman-visual-main sata\pertemuan-08\DataMahasiswa\obj\Debug\net10.0-windows\DataMahasiswa.AssemblyInfo.vb
+C:\Users\dk\Downloads\pemograman-visual-main\pemograman-visual-main sata\pertemuan-08\DataMahasiswa\obj\Debug\net10.0-windows\DataMahasiswa.vbproj.CoreCompileInputs.cache
+C:\Users\dk\Downloads\pemograman-visual-main\pemograman-visual-main sata\pertemuan-08\DataMahasiswa\obj\Debug\net10.0-windows\DataMahasiswa.dll
+C:\Users\dk\Downloads\pemograman-visual-main\pemograman-visual-main sata\pertemuan-08\DataMahasiswa\obj\Debug\net10.0-windows\refint\DataMahasiswa.dll
+C:\Users\dk\Downloads\pemograman-visual-main\pemograman-visual-main sata\pertemuan-08\DataMahasiswa\obj\Debug\net10.0-windows\DataMahasiswa.pdb
+C:\Users\dk\Downloads\pemograman-visual-main\pemograman-visual-main sata\pertemuan-08\DataMahasiswa\obj\Debug\net10.0-windows\DataMahasiswa.genruntimeconfig.cache
+C:\Users\dk\Downloads\pemograman-visual-main\pemograman-visual-main sata\pertemuan-08\DataMahasiswa\obj\Debug\net10.0-windows\ref\DataMahasiswa.dll
