@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 # DOKUMENTASI PRAKTIKUM PEMROGRAMAN VISUAL
 
@@ -21,6 +21,7 @@
 | 03 | Pertemuan 03 | Operator, Struktur Pengendalian, dan Validasi Input | `Selesai` | [Buka Dokumentasi ↗](./Pertemuan3-Operator-dan-struktur-pengendalian/readme.md) |
 | 04 | Pertemuan 04 | Struktur Kontrol Perulangan (Looping) & Deret Data | `Selesai` | [Buka Dokumentasi ↗](./Pertemuan4-Perulangan/Pertemuan4-perulangan/readme.md) |
 | 05 | Pertemuan 05 | Struktur Data Array (1D & 2D) serta Modularisasi Fungsi | `Selesai` | [Buka Dokumentasi ↗](./Pertemuan5-Array/readme.md) |
+| 06 | Pertemuan 06 | Database Configuration & CRUD Sederhana (PostgreSQL & Npgsql) | `Selesai` | [Buka Dokumentasi ↗](./Pertemuan%206%20Configuration/README.md) |
 | 07 | Pertemuan 07 | Validasi Input, Error Handling & Naming Convention | `Selesai` | [Buka Dokumentasi ↗](./pertemuan-07/README.md) |
 | 08 | Pertemuan 08 | Data Binding, DataGridView & Pencarian Data | `Selesai` | [Buka Dokumentasi ↗](./pertemuan-08/README.md) |
 
