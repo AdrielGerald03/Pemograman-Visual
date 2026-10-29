@@ -1,55 +1,77 @@
 ﻿<div align="center">
 
-# PERTEMUAN 03
-### Operator, Struktur Pengendalian, dan Validasi Input (VB.NET)
+# Lab 03 — Operators, Flow Control & Input Validation
+
+[![VB.NET](https://img.shields.io/badge/Language-VB.NET-00539C?style=flat-square&logo=dotnet)](https://learn.microsoft.com/dotnet/visual-basic/)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20Forms-blue?style=flat-square)](https://learn.microsoft.com/dotnet/desktop/winforms/)
+[![Topic](https://img.shields.io/badge/Topic-Input%20Sanitization%20%26%20Dynamic%20UI-orange?style=flat-square)](#)
+
+<p align="center">
+  Implementasi pengondisian logika, validasi input bertingkat, dan dynamic asset rendering pada Windows Forms.
+</p>
+
+[📌 Ringkasan Masalah](#-ringkasan-masalah) •
+[🧱 Komponen & Setup UI](#-komponen--setup-ui) •
+[💻 Implementasi Kode](#-implementasi-kode) •
+[⚙️ Bedah Teknis](#️-bedah-teknis) •
+[📊 Business Logic Table](#-business-logic-table)
 
 </div>
 
 ---
 
-## 1. Deskripsi Praktikum
+### 📌 Ringkasan Masalah
 
-Praktikum ini berfokus pada penerapan logika komputasi dan kendali alur eksekusi program pada arsitektur **Windows Forms** menggunakan bahasa **Visual Basic .NET (VB.NET)**.
+Pada modul ini dibangun modul evaluasi skor nilai sederhana. Program dirancang untuk menguji keandalan penanganan input pengguna (*defensive programming*) sebelum memproses logika bisnis:
 
-Studi kasus yang digunakan adalah sistem evaluasi nilai berdasarkan rentang skor. Program dilengkapi dengan validasi input untuk memastikan data yang dimasukkan berupa angka dan berada pada rentang **0 – 100**.
-
-Selain itu, program juga menerapkan manipulasi aset gambar secara *runtime* berdasarkan hasil evaluasi nilai.
+1. **Input Sanitization**: Memastikan hanya karakter numerik yang dapat diketik.
+2. **Range Guard**: Memastikan nilai berada pada rentang batas valid (`0 - 100`).
+3. **Dynamic Asset Swapping**: Menampilkan aset visual (`PictureBox`) secara dinamis saat runtime sesuai kategori rentang nilai.
 
 ---
 
-## 2. Arsitektur Komponen Visual (UI Controls)
+### 🧱 Komponen & Setup UI
 
-| Kontrol UI | Identitas `(Name)` | Properti Kunci | Deskripsi Fungsional |
+Konfigurasi kontrol pada `Form1.vb [Design]`:
+
+| Control Type | Control Name | Property Key | Kegunaan |
 | :--- | :--- | :--- | :--- |
-| **PictureBox** | `picImage` | `SizeMode: StretchImage` | Menampilkan gambar berdasarkan hasil evaluasi nilai |
-| **TextBox** | `txtNilai` | `Text: ""` | Tempat memasukkan nilai numerik |
-| **Button** | `btnInput` | `Text: "Input"` | Menjalankan proses validasi dan evaluasi nilai |
+| `TextBox` | `txtNilai` | `MaxLength: 3` | Input field skor pengguna |
+| `Button` | `btnInput` | `Text: "Evaluasi"` | Trigger proses validasi & rendering |
+| `PictureBox` | `picImage` | `SizeMode: StretchImage` | Wadah render gambar status skor |
 
 ---
 
-## 3. Logika Kode (`Form1.vb`)
+### 💻 Implementasi Kode
+
+Dokumentasi implementasi handler pada `Form1.vb`:
 
 ```vb
 Public Class Form1
 
+    ''' <summary>
+    ''' Mengeksekusi validasi parsing, range check, dan update tampilan gambar.
+    ''' </summary>
     Private Sub btnInput_Click(sender As Object, e As EventArgs) Handles btnInput.Click
         Dim nilai As Integer
 
-        ' Validasi format numerik
+        ' 1. Guard Clause: Format Parsing Check
         If Not Integer.TryParse(txtNilai.Text, nilai) Then
-            MessageBox.Show("Masukkan dalam bentuk angka")
+            MessageBox.Show("Input harus berupa bilangan bulat!", "Invalid Format", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            txtNilai.SelectAll()
             txtNilai.Focus()
             Return
         End If
 
-        ' Validasi jangkauan nilai 0 - 100
+        ' 2. Guard Clause: Value Range Check (0 - 100)
         If nilai < 0 OrElse nilai > 100 Then
-            MessageBox.Show("Masukkan Nilai 0-100")
+            MessageBox.Show("Nilai harus berada pada rentang 0 hingga 100.", "Out of Range", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            txtNilai.SelectAll()
             txtNilai.Focus()
             Return
         End If
 
-        ' Struktur pengkondisian pemilihan aset
+        ' 3. State Mapping & Dynamic Asset Loading
         If nilai <= 50 Then
             picImage.Image = Image.FromFile("Asset\1.jpeg")
         ElseIf nilai <= 70 Then
@@ -59,73 +81,13 @@ Public Class Form1
         End If
     End Sub
 
+    ''' <summary>
+    ''' Restriksi keystroke di level UI: Menolak karakter non-digit secara real-time.
+    ''' </summary>
     Private Sub txtNilai_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNilai.KeyPress
-        ' Restriksi karakter: hanya menerima angka dan tombol kontrol
         If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) Then
-            e.Handled = True
+            e.Handled = True ' Drop event keystroke yang tidak valid
         End If
     End Sub
 
 End Class
-```
-
----
-
-## 4. Pembahasan Detail Konsep Teknis
-
-### `Integer.TryParse`
-Digunakan untuk mengubah data bertipe `String` menjadi `Integer` dengan cara yang lebih aman. Jika input tidak valid atau kosong, program tidak akan mengalami *runtime exception*.
-
-### Operator `OrElse` dan `AndAlso`
-Kedua operator tersebut menggunakan konsep **short-circuiting**, yaitu evaluasi kondisi akan dihentikan apabila hasil akhirnya sudah dapat ditentukan.
-- `OrElse` berhenti ketika kondisi pertama bernilai `True`.
-- `AndAlso` berhenti ketika kondisi pertama bernilai `False`.
-
-### Event Handler `KeyPress` dan `e.Handled`
-Event `KeyPress` digunakan untuk membatasi karakter yang dapat dimasukkan ke dalam `TextBox`.
-
-Program hanya mengizinkan:
-- Angka `0 – 9`
-- Tombol kontrol seperti `Backspace`
-
-Jika karakter bukan angka atau tombol kontrol, maka `e.Handled = True` digunakan untuk mencegah karakter tersebut masuk ke dalam `TextBox`.
-
-### Manajemen Aset dengan `Image.FromFile`
-`Image.FromFile()` digunakan untuk memuat gambar secara dinamis berdasarkan kondisi nilai.
-
-File gambar menggunakan **relative path**:
-```text
-Asset\1.jpeg
-Asset\2.png
-Asset\3.png
-```
-
-> [!NOTE]
-> Pastikan file gambar berada pada folder `Asset` dan properti **Copy to Output Directory** diatur menjadi **Copy if newer** agar file tersedia ketika aplikasi dijalankan.
-
----
-
-## 5. Aturan Bisnis & Logika Evaluasi Skor
-
-| Rentang Nilai | Kondisi Logika | Output Aset | Aksi Sistem |
-| :--- | :--- | :--- | :--- |
-| **0 – 50** | `nilai <= 50` | `Asset\1.jpeg` | Menampilkan gambar tingkat rendah |
-| **51 – 70** | `nilai > 50 AndAlso nilai <= 70` | `Asset\2.png` | Menampilkan gambar tingkat menengah |
-| **71 – 100** | `nilai > 70 AndAlso nilai <= 100` | `Asset\3.png` | Menampilkan gambar tingkat tinggi |
-| **Di luar 0 – 100** | `nilai < 0 OrElse nilai > 100` | `-` | Menampilkan dialog peringatan |
-
----
-
-## 6. Kesimpulan
-
-Pada praktikum ini diterapkan beberapa konsep dasar pemrograman menggunakan **VB.NET**, yaitu:
-
-1. Validasi input menggunakan `Integer.TryParse`.
-2. Penggunaan operator logika `OrElse` dan `AndAlso`.
-3. Penggunaan struktur percabangan `If...ElseIf...Else`.
-4. Pembatasan input menggunakan event `KeyPress`.
-5. Penggunaan `e.Handled` untuk mencegah karakter yang tidak valid.
-6. Pemanggilan dan manipulasi gambar menggunakan `Image.FromFile`.
-7. Penggunaan aset eksternal dengan **relative path**.
-
-Dengan konsep tersebut, program dapat menerima input nilai, melakukan validasi, mengevaluasi rentang nilai, kemudian menampilkan gambar yang sesuai dengan hasil evaluasi.
