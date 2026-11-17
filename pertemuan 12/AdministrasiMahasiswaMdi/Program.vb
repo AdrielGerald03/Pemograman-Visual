@@ -1,0 +1,11 @@
+Option Strict On
+
+Friend Module Program
+    <STAThread()>
+    Friend Sub Main()
+        Application.SetHighDpiMode(HighDpiMode.SystemAware)
+        Application.EnableVisualStyles()
+        Application.SetCompatibleTextRenderingDefault(False)
+        Application.Run(New FrmUtama())
+    End Sub
+End Module
